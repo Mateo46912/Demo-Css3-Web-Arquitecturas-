@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitecturas de Aplicaciones Web - Estándar CSS3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <span class="materia-badge">Programación y Plataformas Web</span>
+    <h1>Modelos y Patrones de Arquitectura Web</h1>
+    <p class="descripcion">
+      Página web donde se conceptualizan y comparan las diferentes estructuras y modelos clave para el desarrollo web actual, organizada mediante una cuadrícula adaptable con CSS Grid.
+    </p>
+  </header>
+
+  <!-- Contenedor con CSS Grid adaptable (Respuesta a la Pregunta 3) -->
+  <main class="grid-container">
+
+    <!-- Tarjeta 1: Monolítico -->
+    <article class="card">
+      <div class="card-header">
+        <span class="tipo-tag centralizado">Centralizado</span>
+        <h2>Arquitectura Monolítica</h2>
+      </div>
+      <div class="card-body">
+        <p>Toda la aplicación es una sola unidad desarrollada y lanzada una sola vez. Todo el backend y frontend están juntos en un mismo código fuente y corren en un solo servidor.</p>
+        <ul class="caracteristicas">
+          <li><strong>Ventaja:</strong> Menor complejidad inicial para programar y probar.</li>
+          <li><strong>Desafío:</strong> Las partes están tan pegadas que si una falla, puede tumbar toda la página.</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <span class="estado">Ejemplo: Blogs personales, portafolios web o tiendas pequeñas</span>
+      </div>
+    </article>
+
+    <!-- Tarjeta 2: Microservicios -->
+    <article class="card">
+      <div class="card-header">
+        <span class="tipo-tag distribuido">Distribuido</span>
+        <h2>Microservicios</h2>
+      </div>
+      <div class="card-body">
+        <p>Divide el backend en varios servicios pequeños e independientes que se comunican por HTTP. Esto permite actualizar o arreglar una función sin tener que reinstalar toda la aplicación desde cero.</p>
+        <ul class="caracteristicas">
+          <li><strong>Ventaja:</strong> Permite modificar o mejorar un servicio sin tocar el resto del sistema.</li>
+          <li><strong>Desafío:</strong> Es más difícil monitorear y conectar tantos servicios por red.</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <span class="estado">Ejemplo: Plataformas grandes como Netflix, Uber o Amazon</span>
+      </div>
+    </article>
+
+    <!-- Tarjeta 3: Tres Capas (3-Tier) -->
+    <article class="card">
+      <div class="card-header">
+        <span class="tipo-tag jerarquico">Estructural</span>
+        <h2>Arquitectura de 3 Capas</h2>
+      </div>
+      <div class="card-body">
+        <p>Es una arquitectura que separa el desarrollo en tres niveles: la Capa de Presentación (lo visual en el navegador), la Capa Lógica o de Negocio (las funciones del sistema) y la Capa de Datos (la base de datos).</p>
+        <ul class="caracteristicas">
+          <li><strong>Ventaja:</strong> Cada parte del equipo trabaja en su propia capa de forma ordenada.</li>
+          <li><strong>Desafío:</strong> Obliga a mantener reglas estrictas de conexión entre capas.</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <span class="estado">Ejemplo: Sistemas académicos universitarios o bancos</span>
+      </div>
+    </article>
+
+    <!-- Tarjeta 4: Serverless -->
+    <article class="card">
+      <div class="card-header">
+        <span class="tipo-tag cloud">En la Nube</span>
+        <h2>Serverless (FaaS)</h2>
+      </div>
+      <div class="card-body">
+        <p>El desarrollador solo se encarga de programar las funciones de su aplicación; el proveedor en la nube administra los servidores y recursos sin que el programador deba preocuparse por ellos.</p>
+        <ul class="caracteristicas">
+          <li><strong>Ventaja:</strong> Solo pagas por los segundos exactos que tu código se ejecuta.</li>
+          <li><strong>Desafío:</strong> Es difícil mudar el código a otro proveedor si decides cambiar de servicio.</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <span class="estado">Ejemplo: Procesamiento de pagos con Stripe o redimensionar fotos subidas</span>
+      </div>
+    </article>
+
+  </main>
+
+</body>
+</html>
